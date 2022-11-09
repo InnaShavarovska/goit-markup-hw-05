@@ -173,13 +173,13 @@ display: flex;
 .contact-icon{
     vertical-align: middle;
     margin-right: 10px;
-}
+    fill: currentColor;   
+   }
 
 .contact-link:hover,
-.contact-link:focus{
+.contact-link:focus {
     fill: var(--blue-color);
 }
-
 
 
 /* Cтилі html */
@@ -380,6 +380,7 @@ margin-top: 16px;
     padding: 12px;
     border-radius: 50%;
     color:#AFB1B8;
+    background-color: var(--white-color);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -415,11 +416,12 @@ margin-top: 16px;
    height: 92px;
    border: 1px solid#AFB1B8 ;
    border-radius: 4px; 
-   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-icon{
     fill: #AFB1B8;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover,
@@ -641,6 +643,8 @@ line-height: 1.9;
     border-bottom: 1px solid #EEEEEE;   
 }
 
+/* Модальне вікно */
+
 .backdrop{
     position: fixed;
         width: 100%;
@@ -665,7 +669,7 @@ line-height: 1.9;
      width: 528px;
      height: 581px;
      background-color: var(--white-color);
-     transition: transform opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden .modal{
@@ -688,5 +692,12 @@ line-height: 1.9;
    display: block;
    justify-content: center;
    align-items: center;
-   fill:#000000; 
+   fill: currentColor; 
+   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);;
+}
+
+.modal-close-icon:hover,
+.modal-close-icon:focus
+{
+    fill: var(--blue-color);
 }
